@@ -1,0 +1,49 @@
+# E-commerce Data Pipeline Dependencies
+# =====================================
+
+# Data Processing
+pandas>=2.1.0
+polars>=0.20.0
+pyarrow>=14.0.0  # Parquet support
+
+# Data Validation
+pydantic>=2.5.0
+great-expectations>=0.18.0
+
+# Google Cloud
+google-cloud-bigquery>=3.14.0
+google-cloud-storage>=2.14.0
+
+# Snowflake
+snowflake-connector-python>=3.6.0
+
+# dbt
+dbt-core>=1.7.0
+dbt-bigquery>=1.7.0
+dbt-snowflake>=1.7.0
+
+# API & HTTP
+requests>=2.31.0
+
+# PySpark (optional - large datasets)
+pyspark>=3.5.0
+
+# Visualization
+streamlit>=1.29.0
+plotly>=5.18.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Code Quality
+black>=23.12.0
+flake8>=6.1.0
+isort>=5.13.0
+
+# Environment
+python-dotenv>=1.0.0
+
+# Utilities
+faker>=22.0.0  # Fake data generation
+loguru>=0.7.0  # Better logging
