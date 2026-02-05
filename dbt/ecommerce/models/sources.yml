@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Sirovi e-commerce podaci"
+    database: crypto-data-pipline-484511
+    schema: ecommerce_raw
+    tables:
+      - name: customers
+      - name: products
+      - name: orders
+      - name: order_items
