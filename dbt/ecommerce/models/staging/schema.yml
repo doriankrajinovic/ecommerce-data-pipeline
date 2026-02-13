@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Staging tablica kupaca"
+    columns:
+      - name: customer_id
+        description: "Primarni ključ kupca"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    description: "Staging tablica proizvoda"
+    columns:
+      - name: product_id
+        description: "Primarni ključ proizvoda"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    description: "Staging tablica narudžbi"
+    columns:
+      - name: order_id
+        description: "Primarni ključ narudžbe"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: stg_order_items
+    description: "Staging tablica stavki narudžbi"
+    columns:
+      - name: order_item_id
+        description: "Primarni ključ stavke"
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
