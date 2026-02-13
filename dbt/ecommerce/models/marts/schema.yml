@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimenzija kupaca s metrikama"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    description: "Fact tablica narudžbi"
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_daily_revenue
+    description: "Dnevni prihodi"
+    columns:
+      - name: date
+        tests:
+          - unique
+          - not_null
