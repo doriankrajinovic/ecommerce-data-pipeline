@@ -6,7 +6,7 @@ SELECT
     category,
     CAST(price AS NUMERIC) AS price,
     stock_quantity,
-    TIMESTAMP_MICROS(created_at) AS created_at,
+    TIMESTAMP_MICROS(CAST(created_at / 1000 AS INT64)) AS created_at,
     CURRENT_TIMESTAMP() AS loaded_at
 
 FROM {{ source('raw', 'products') }}
